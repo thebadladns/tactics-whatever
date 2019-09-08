@@ -24,12 +24,12 @@ class BattleCursor extends FlxSprite {
 
 	private static inline var moveViewportThreshold: Int = 2;
 
-	private static var marginTop: Int = -4;
-	private static var marginTopOriginal: Int = -4;
-	private static var marginTopInverted: Int = -10;
-	private static var marginLeft: Int = -4;
-	private static var marginLeftOriginal: Int = -4;
-	private static var marginLeftInverted: Int = -10;
+	private static var marginTop: Int = -8;
+	private static var marginTopOriginal: Int = -8;
+	private static var marginTopInverted: Int = -20;
+	private static var marginLeft: Int = -8;
+	private static var marginLeftOriginal: Int = -8;
+	private static var marginLeftInverted: Int = -20;
 
 	public var _map: MapState;
 	public var pos: TilePoint;
