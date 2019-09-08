@@ -8,7 +8,7 @@ import flixel.addons.transition.TransitionData;
 import entities.Unit;
 
 import ui.BattleCursor;
-//import ui.BattleMenu;
+import ui.BattleMenu;
 //import ui.BattleDialog;
 //import ui.TerrainBattleDialog;
 //import ui.UnitBattleDialog;
@@ -23,7 +23,7 @@ class MapState extends FlxTransitionableState {
 	public var players: Array<Player>;
 
 	public var cursor: BattleCursor;
-	//public var menu: BattleMenu;
+	public var menu: BattleMenu;
 
 	public var level: Level;
 	public var selectedUnit: Unit;

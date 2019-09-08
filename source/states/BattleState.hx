@@ -21,7 +21,7 @@ import entities.Unit;
 
 //import ui.BattleDialog;
 import ui.BattleCursor;
-//import ui.BattleMenu;
+import ui.BattleMenu;
 //import ui.ActionBattleDialog;
 //import ui.UnitInfoDialog;
 //import ui.UnitDeploymentDialog;
@@ -157,8 +157,8 @@ class BattleState extends MapState {
 		/*combatDialog = new CombatBattleDialog(BattleDialog.QUADRANT_TOP_RIGHT);
 		scene.getLayer("hud").add(combatDialog);*/
 
-		/*menu = new BattleMenu();
-		scene.getLayer("hud").add(menu);*/
+		menu = new BattleMenu();
+		scene.getLayer("hud").add(menu);
 
 		/*battleHud = new BattleHud();
 		scene.getLayer("hud").add(battleHud);*/
@@ -208,6 +208,8 @@ class BattleState extends MapState {
 	override public function moveViewport(x: Int, y: Int) {
 		var offsetX = Std.int(x - FlxG.camera.scroll.x);
 		var offsetY = Std.int(y - FlxG.camera.scroll.y);
+
+		menu.setOffset(x, y);
 
 		/*unitInfo.setOffset(x, y);
 		terrainInfo.setOffset(x, y);
