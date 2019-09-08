@@ -1,0 +1,136 @@
+{
+	"plain": {
+		"name": "Plain",
+		"uName": "plain",
+		"def": 1,
+		"frameIndex": 7,
+		"movCost": {
+			"infantry": 1,
+			"mech": 1,
+			"tires": 2,
+			"treads": 1,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"forest": {
+		"name": "Forest",
+		"uName": "forest",
+		"def": 2,
+		"frameIndex": 5,
+		"movCost": {
+			"infantry": 1,
+			"mech": 1,
+			"tires": 3,
+			"treads": 2,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"mountain": {
+		"name": "Mount.",
+		"uName": "mountain",
+		"def": 3,
+		"frameIndex": 2,
+		"movCost": {
+			"infantry": 2,
+			"mech": 1,
+			"tires": 99,
+			"treads": 99,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"road": {
+		"name": "Road",
+		"uName": "road",
+		"def": 0,
+		"frameIndex": 4,
+		"movCost": {
+			"infantry": 1,
+			"mech": 1,
+			"tires": 1,
+			"treads": 1,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"bridge": {
+		"name": "Bridge",
+		"uName": "bridge",
+		"def": 0,
+		"frameIndex": 0,
+		"movCost": {
+			"infantry": 1,
+			"mech": 1,
+			"tires": 1,
+			"treads": 1,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"river": {
+		"name": "River",
+		"uName": "river",
+		"def": 0,
+		"frameIndex": 1,
+		"movCost": {
+			"infantry": 2,
+			"mech": 1,
+			"tires": 99,
+			"treads": 99,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"beach": {
+		"name": "Beach",
+		"uName": "beach",
+		"def": 0,
+		"frameIndex": 6,
+		"movCost": {
+			"infantry": 1,
+			"mech": 1,
+			"tires": 1,
+			"treads": 1,
+			"air": 1,
+			"sea": 99
+		}
+	},
+
+	"sea": {
+		"name": "Sea",
+		"uName": "sea",
+		"def": 0,
+		"frameIndex": 3,
+		"movCost": {
+			"infantry": 99,
+			"mech": 99,
+			"tires": 99,
+			"treads": 99,
+			"air": 1,
+			"sea": 1
+		}
+	},
+
+	"reef": {
+		"name": "Reef",
+		"uName": "reef",
+		"def": 1,
+		"frameIndex": 8,
+		"movCost": {
+			"infantry": 99,
+			"mech": 99,
+			"tires": 99,
+			"treads": 99,
+			"air": 1,
+			"sea": 2
+		}
+	}
+}
