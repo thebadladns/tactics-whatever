@@ -7,7 +7,7 @@ import haxe.xml.Fast;
  * (original by Matt Tuttle based on Thomas Jahn's. Haxe port by Adrien Fischer)
  * This content is released under the MIT License.
  */
-class TiledPropertySet implements Dynamic<String>
+class TiledPropertySet
 {
 	public function new()
 	{
