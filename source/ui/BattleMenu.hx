@@ -46,8 +46,8 @@ class BattleMenu extends BattleDialog {
 		entries.push(endTurnEntry);
 
 		rows = entries.length;*/
-		width = 3 * ViewPort.tileSize;
-		height = 10 * ViewPort.tileSize;
+		width = Std.int(3 * ViewPort.tileSize);
+		height = Std.int(10 * ViewPort.tileSize);
 		path = "assets/images/ui/sidebar-menu.png";
 
 		super(width, height, marginTop, marginLeft, BattleDialog.QUADRANT_TOP_RIGHT);

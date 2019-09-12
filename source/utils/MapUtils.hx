@@ -180,7 +180,7 @@ class MapUtils {
 
 	public static function getPathGraphic(x: Float, y: Float, from: PathDirection, to: PathDirection): FlxSprite {
 		var graphic: FlxSprite = new FlxSprite(x, y);
-		graphic.loadGraphic("assets/images/path.png", true, ViewPort.tileSize, ViewPort.tileSize);
+		graphic.loadGraphic("assets/images/path.png", true, Std.int(ViewPort.tileSize), Std.int(ViewPort.tileSize));
 
 		if (from == PathDirection.START) {
 			if (to == PathDirection.UP)

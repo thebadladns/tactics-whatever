@@ -119,14 +119,14 @@ class BattleDialog extends FlxTypedGroup<FlxSprite> {
 				x = marginX;
 				y = marginY;
 			case QUADRANT_TOP_RIGHT:
-				x = ViewPort.width - bgWidth - marginX;
+				x = Std.int(ViewPort.width - bgWidth - marginX);
 				y = marginY;
 			case QUADRANT_BOTTOM_LEFT:
 				x = marginX;
-				y = ViewPort.height - bgHeight - marginY;
+				y = Std.int(ViewPort.height - bgHeight - marginY);
 			case QUADRANT_BOTTOM_RIGHT:
-				x = ViewPort.width - bgWidth - marginX;
-				y = ViewPort.height - bgHeight - marginY;
+				x = Std.int(ViewPort.width - bgWidth - marginX);
+				y = Std.int(ViewPort.height - bgHeight - marginY);
 		}
 
 		move(vpX + x, vpY + y);
