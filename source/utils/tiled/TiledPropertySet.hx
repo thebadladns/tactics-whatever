@@ -1,6 +1,6 @@
 package utils.tiled;
 
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2013 by Samuel Batista
@@ -34,9 +34,9 @@ class TiledPropertySet
 		return keys.keys();
 	}
 
-	public function extend(Source:Fast)
+	public function extend(Source:Access)
 	{
-		var prop:Fast;
+		var prop:Access;
 
 		for (prop in Source.nodes.property)
 		{

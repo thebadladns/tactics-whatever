@@ -2,7 +2,7 @@ package utils.tiled;
 
 import flash.utils.ByteArray;
 import flash.utils.Endian;
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2013 by Samuel Batista
@@ -25,9 +25,9 @@ class TiledLayer
 	
 	private static inline var BASE64_CHARS:String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 	
-	private var _xmlData:Fast;
+	private var _xmlData:Access;
 	
-	public function new(Source:Fast, Parent:TiledMap)
+	public function new(Source:Access, Parent:TiledMap)
 	{
 		properties = new TiledPropertySet();
 		map = Parent;
@@ -41,7 +41,7 @@ class TiledLayer
 		tiles = new Array<TiledTile>();
 		
 		// load properties
-		var node:Fast;
+		var node:Access;
 		
 		for (node in Source.nodes.properties)
 		{

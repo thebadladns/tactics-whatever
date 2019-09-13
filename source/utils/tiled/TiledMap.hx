@@ -1,7 +1,7 @@
 package utils.tiled;
 
 import openfl.Assets;
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 #if cpp
 import sys.io.File;
@@ -48,16 +48,16 @@ class TiledMap
 	public function new(Data:Dynamic)
 	{
 		properties = new TiledPropertySet();
-		var source:Fast = null;
-		var node:Fast = null;
+		var source:Access = null;
+		var node:Access = null;
 
 		if (Std.is(Data, String))
 		{
-			source = new Fast(Xml.parse(Assets.getText(Data)));
+			source = new Access(Xml.parse(Assets.getText(Data)));
 		}
 		else if (Std.is(Data, Xml))
 		{
-			source = new Fast(Data);
+			source = new Access(Data);
 		}
 		else
 		{
