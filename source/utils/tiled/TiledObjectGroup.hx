@@ -1,6 +1,6 @@
 package utils.tiled;
 
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2013 by Samuel Batista
@@ -17,7 +17,7 @@ class TiledObjectGroup
 	public var properties:TiledPropertySet;
 	public var objects:Array<TiledObject>;
 	
-	public function new(Source:Fast, Parent:TiledMap)
+	public function new(Source:Access, Parent:TiledMap)
 	{
 		properties = new TiledPropertySet();
 		objects = new Array<TiledObject>();
@@ -36,7 +36,7 @@ class TiledObjectGroup
 			color = 0;
 		
 		// load properties
-		var node:Fast;
+		var node:Access;
 		
 		for (node in Source.nodes.properties)
 		{

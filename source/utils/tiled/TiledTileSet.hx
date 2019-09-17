@@ -2,7 +2,7 @@ package utils.tiled;
 
 import flash.geom.Rectangle;
 import flash.utils.ByteArray;
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2015 by Rafa de la Hoz
@@ -29,14 +29,14 @@ class TiledTileSet
 
 	public var tileProps:Array<TiledPropertySet>;
 
-	public function new(data:Dynamic)
+	public function new(data:Access)
 	{
-		var node:Fast, source:Fast;
+		var node:Access, source:Access;
 		numTiles = 0xFFFFFF;
 		numRows = numCols = 1;
 
 		// Use the correct data format
-		var source : Fast = prepareFastData(data);
+		var source : Access = prepareAccessData(data);
 
 		firstGID = (source.has.firstgid) ? Std.parseInt(source.att.firstgid) : 1;
 
@@ -51,7 +51,7 @@ class TiledTileSet
 			var imgWidth = 8;
 			var imgHeight = 8;
 
-			var node:Fast = source.node.image;
+			var node:Access = source.node.image;
 			imageSource = node.att.source;
 
 			imgWidth = Std.parseInt(node.att.width);
@@ -146,31 +146,32 @@ public inline function getProperties(ID:Int):TiledPropertySet
 		return new Rectangle((ID % numCols) * tileWidth, (ID / numCols) * tileHeight);
 	}
 
-	public static function prepareFastData(data:Dynamic) : Fast
+	public static function prepareAccessData(data : Access) : Access
 	{
-		var source : Fast;
+		var source : haxe.xml.Access.Access;
 
 		// Use the correct data format
-		if (Std.is(data, Fast))
+		/*if (Std.is(data, Access))
 		{
 			source = data;
 		}
 		else if (Std.is(data, ByteArray))
 		{
-			source = new Fast(Xml.parse(data.toString()));
+			source = new Access(Xml.parse(data.toString()));
 			source = source.node.tileset;
 		}
 		else
 		{
 			throw "Unknown TMX tileset format";
-		}
+		}*/
+		source = data;
 
 		return source;
 	}
 
 	public static inline function isTileset(data:Dynamic) : Bool
 	{
-		var source : Fast = prepareFastData(data);
+		var source : Access = prepareAccessData(data);
 
 		return (source.hasNode.image);
 	}

@@ -97,7 +97,7 @@ class BattleState extends MapState {
 		scene.getLayer("map").add(level.backgroundTiles);
 
 		FlxG.camera.bgColor = FlxColor.WHITE;
-		FlxG.camera.setSize(level.width * ViewPort.tileSize, level.height * ViewPort.tileSize);
+		FlxG.camera.setSize(Std.int(level.width * ViewPort.tileSize), Std.int(level.height * ViewPort.tileSize));
 
 		/*scene.addLayer("buildings");
 		buildings = new Map<Int, Building>();
@@ -205,11 +205,11 @@ class BattleState extends MapState {
 		return instance;
 	}
 
-	override public function moveViewport(x: Int, y: Int) {
+	override public function moveViewport(x: Float, y: Float) {
 		var offsetX = Std.int(x - FlxG.camera.scroll.x);
 		var offsetY = Std.int(y - FlxG.camera.scroll.y);
 
-		menu.setOffset(x, y);
+		menu.setOffset(Std.int(x), Std.int(y));
 
 		/*unitInfo.setOffset(x, y);
 		terrainInfo.setOffset(x, y);
@@ -226,10 +226,10 @@ class BattleState extends MapState {
 		var cameraPosX: Int = posX - Std.int(ViewPort.widthInTiles / 2);
 		var cameraPosY: Int = posY - Std.int(ViewPort.heightInTiles / 2);
 
-		cameraPosX = Utils.min(level.width - ViewPort.widthInTiles, Utils.max(0, cameraPosX));
-		cameraPosY = Utils.min(level.height - ViewPort.heightInTiles, Utils.max(0, cameraPosY));
+		cameraPosX = Utils.min(Std.int(level.width - ViewPort.widthInTiles), Utils.max(0, cameraPosX));
+		cameraPosY = Utils.min(Std.int(level.height - ViewPort.heightInTiles), Utils.max(0, cameraPosY));
 
-		moveViewport(cameraPosX * ViewPort.tileSize, cameraPosY * ViewPort.tileSize);
+		moveViewport(Std.int(cameraPosX * ViewPort.tileSize), Std.int(cameraPosY * ViewPort.tileSize));
 	}
 
 	public function centerCameraOnCursor() {
@@ -784,7 +784,7 @@ class BattleState extends MapState {
 		pathOptions = MapUtils.findPathOptions(this, selectedUnit);
 		for (tile in pathOptions.nodes.getAll()) {
 			var tileGraphic = new FlxSprite(tile.x * ViewPort.tileSize, tile.y * ViewPort.tileSize);
-			tileGraphic.loadGraphic("assets/images/area-tiles-blue.png", true, ViewPort.tileSize, ViewPort.tileSize);
+			tileGraphic.loadGraphic("assets/images/area-tiles-blue.png", true, Std.int(ViewPort.tileSize), Std.int(ViewPort.tileSize));
 
 			var neighbour: TilePoint = new TilePoint(tile.x, tile.y - 1);
 			var hasTileUp: Int = Utils.boolToInt(!pathOptions.nodes.contains(neighbour));

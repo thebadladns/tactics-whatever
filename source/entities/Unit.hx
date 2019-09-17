@@ -66,7 +66,7 @@ class Unit extends Entity {
 		offsetY = -8;
 		this.player = player;
 
-		super(posX * ViewPort.tileSize + offsetX, posY * ViewPort.tileSize + offsetY);
+		super(Std.int(posX * ViewPort.tileSize + offsetX), Std.int(posY * ViewPort.tileSize + offsetY));
 		sprite.loadGraphic(unitType.gfxPath, true, 24, 24);
 
 		sprite.setFacingFlip(FlxObject.LEFT, true, false);

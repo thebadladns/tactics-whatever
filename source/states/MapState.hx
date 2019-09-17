@@ -38,10 +38,10 @@ class MapState extends FlxTransitionableState {
 		players = new Array<Player>();
 
 		FlxG.camera.bgColor = FlxColor.WHITE;
-		FlxG.camera.setSize(level.width * ViewPort.tileSize, level.height * ViewPort.tileSize);
+		FlxG.camera.setSize(Std.int(level.width * ViewPort.tileSize), Std.int(level.height * ViewPort.tileSize));
 	}
 
-	public function moveViewport(x: Int, y: Int) {
+	public function moveViewport(x: Float, y: Float) {
 		FlxG.camera.scroll.x = x;
 		FlxG.camera.scroll.y = y;
 	}

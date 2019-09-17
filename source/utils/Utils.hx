@@ -12,8 +12,8 @@ class Utils {
 		return a >= b ? a : b;
 	}
 
-	public static function min(a: Int, b: Int): Int {
-		return a <= b ? a : b;
+	public static function min(a: Float, b: Float): Int {
+		return a <= b ? Std.int(a) : Std.int(b);
 	}
 
 	public static function sign(a: Int): Int {

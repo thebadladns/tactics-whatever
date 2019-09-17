@@ -2,7 +2,7 @@ package utils.tiled;
 
 import flash.geom.Rectangle;
 import flash.utils.ByteArray;
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2015 by Rafa de la Hoz
@@ -27,17 +27,17 @@ class TiledImage
 	
 	public function new(firstGID : Int, data : Dynamic)
 	{
-		var node:Fast, source:Fast;
+		var node:Access, source:Access;
 		
 		// Use the correct data format
-		if (Std.is(data, Fast))
-		{
+		/*if (Std.is(data, Access))
+		{*/
 			source = data;
-		}
+		/*}
 		else 
 		{
 			throw "Unknown TMX tileset format";
-		}
+		}*/
 		
 		gid = firstGID + Std.parseInt(source.att.id);
 		node = source.node.image;

@@ -1,13 +1,13 @@
 package utils.tiled;
 
-import haxe.xml.Fast;
+import haxe.xml.Access;
 
 /**
  * Copyright (c) 2013 by Samuel Batista
  * (original by Matt Tuttle based on Thomas Jahn's. Haxe port by Adrien Fischer)
  * This content is released under the MIT License.
  */
-class TiledPropertySet implements Dynamic<String>
+class TiledPropertySet
 {
 	public function new()
 	{
@@ -34,9 +34,9 @@ class TiledPropertySet implements Dynamic<String>
 		return keys.keys();
 	}
 
-	public function extend(Source:Fast)
+	public function extend(Source:Access)
 	{
-		var prop:Fast;
+		var prop:Access;
 
 		for (prop in Source.nodes.property)
 		{

@@ -1,6 +1,6 @@
 package utils.tiled;
 
-import haxe.xml.Fast;
+import haxe.xml.Access;
 import flixel.math.FlxPoint;
 
 /**
@@ -31,7 +31,7 @@ class TiledObject
 	public var height:Int;
 	public var name:String;
 	public var type:String;
-	public var xmlData:Fast;
+	public var xmlData:Access;
 	/**
 	 * In degrees
 	 */
@@ -69,7 +69,7 @@ class TiledObject
 	 */
 	public var points:Array<FlxPoint>;
 
-	public function new(Source:Fast, Parent:TiledObjectGroup)
+	public function new(Source:Access, Parent:TiledObjectGroup)
 	{
 		xmlData = Source;
 		group = Parent;
@@ -127,7 +127,7 @@ class TiledObject
 		}
 	}
 
-	private function getPoints(Node:Fast):Void {
+	private function getPoints(Node:Access):Void {
 		points = new Array<FlxPoint>();
 
 		var pointsStr:Array<String> = Node.att.points.split(" ");
