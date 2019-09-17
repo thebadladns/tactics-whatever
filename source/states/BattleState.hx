@@ -1031,7 +1031,8 @@ class BattleState extends MapState {
 	public function syncIdleAnimations() {
 		for (player in players) {
 			for (unit in player.army) {
-				if (unit.sprite.animation.curAnim.name == "idle") {
+				if (unit.sprite.animation.curAnim != null
+				 && unit.sprite.animation.curAnim.name == "idle") {
 					unit.sprite.animation.curAnim.restart();
 				}
 			}

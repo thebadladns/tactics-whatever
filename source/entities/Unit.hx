@@ -92,6 +92,8 @@ class Unit extends Entity {
 		name = unitType.name;
 
 		hp = 10;
+		atkRangeMin = 0;
+		atkRangeMax = 0;
 		/*fuel = unitType.fuel;
 		ammo = new Array<Int>();
 		atkRangeMin = 99;
