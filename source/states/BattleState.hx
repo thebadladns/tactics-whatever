@@ -812,7 +812,7 @@ class BattleState extends MapState {
 		Utils.clearSpriteGroup(attackRange);
 
 		for (tile in tilesInAttackRange.getAll()) {
-			var tileGraphic = new FlxSprite(tile.x * 16, tile.y * 16);
+			var tileGraphic = new FlxSprite(tile.x * ViewPort.tileSize, tile.y * ViewPort.tileSize);
 			tileGraphic.loadGraphic("assets/images/area-tiles-red.png", true, 16, 16);
 
 			var neighbour: TilePoint = new TilePoint(tile.x, tile.y - 1);
